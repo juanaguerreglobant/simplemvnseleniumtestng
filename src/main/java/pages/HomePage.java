@@ -15,6 +15,10 @@ public class HomePage extends PageObject {
     By byEyeColorDrop = By.id("entry_1264472189");
     By bySubmitBtn = By.id("ss-submit");
 
+    public void loadBaseUrl(){
+        driver.get(CONFIG.getProperty("baseurl"));
+    }
+
     public void fillForm(String fName, String lName, String address, String emailAddress, String eyeColor){
         type(byFirstNameField, fName);
         type(byLastNameField, lName);
